@@ -1,0 +1,59 @@
+/* info #16a1b8 */
+/* blue #004ea1 */
+/* green #6fbd43 */
+a.leaflet-draw-draw-polygon {
+    background-color:#E489C4;
+    color:#fff;
+}
+.leaflet-popup-content-wrapper {
+  background:#f1f1f1;
+  color:#004ea1;
+  font-size:12px;
+  font-weight:600;
+  line-height:4px;
+  height:200px;
+  width:400px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  }
+.leaflet-popup-content-wrapper a {
+  color:#6fbd43 !important;
+  font-weight:600;
+  font-size:12px;
+  }
+.leaflet-popup-content-wrapper a:hover {
+  color:#6fbd43 !important;
+  font-size:12px;
+  font-weight:700;
+  cursor:pointer;
+  }
+.leaflet-popup-close-button {
+  margin-right:20px;
+}
+.leaflet-popup-close-button:hover {
+  color:#6fbd43;
+  font-weight:800;
+}
+.leaflet-popup-tip {
+    background:#f1f1f1;
+}
+
+#select_car{
+    width:80px;
+    color:#004ea1;
+    background-color:#f1f1f1;
+}
+#select_tra{
+    width:80px;
+    color:#004ea1;
+    background-color:#f1f1f1;
+}
+
+.leaf_title > div > span > a {
+    color:#545454;
+}
+
+div .col-lg-12 .leaf_title {
+    margin-right:0px !important;
+    margin-left:0px !important;
+}

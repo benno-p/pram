@@ -1,0 +1,681 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+body {
+/*    background:#b4b0a1;*/
+    font-family: 'Montserrat','Source Sans Pro', sans-serif;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    /*background:url(../img/map22.png) no-repeat center center fixed;
+    /*-webkit-background-size:cover;
+    /*   -moz-background-size:cover;
+    /*     -o-background-size:cover;
+    /*       -background-size:cover;*/
+}
+
+/* surcharge par .skills h1, h2, h3, h4, h5, h6 and color in skills appear in white*/
+h1, h2, h3, h4, h5, h6 {
+}
+
+.overlay {
+    background-image: url("../img/semi_transparent.png");
+    z-index: 444444;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}​
+
+/*colors_stytle*/
+.colors{
+grey      : #2c3f39;
+bleu      : #354f9a;
+orange    : #e06611;
+vert      : #81bd1b;
+grey_light: #d4d4d4;
+purple    : #8017d8;
+}
+
+/* HOME PAGE AND INDEX */
+.menu .righthere {
+float:right;
+}
+.righthere:hover{
+    cursor: pointer;
+}
+.hide {
+visibility: hidden;
+}
+
+.margin_div {
+margin-left:4px;
+margin-right:4px;
+}
+/* HOME PAGE AND INDEX END*/
+
+.float_block {
+/* top right bottom left */
+display: inline-block;
+position: relative;
+float: left;
+margin: 16px 4px 4px 0;
+}
+
+
+.map {
+/*float: left;*/
+width:400px;
+height: 400px;
+}
+
+.waitingbox {
+display:inline;
+position: absolute;
+margin: auto;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+width: 2000px;
+height: 31px;
+background-color: #fff;
+color: #354f9a;
+z-index:999999;
+overflow:hidden;
+}
+.waitingbox img{
+vertical-align:middle;
+margin-left:4px;
+}
+.waitingbox p{
+vertical-align:middle;
+}
+
+.sized_index {
+margin-top:20px;
+margin-left:50px;
+max-width:200px;
+max-height:120px;
+opacity:0.5;
+}
+.legend_img_text {
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+font-size :20px;
+font-weight:600;
+color: #ababab;
+}
+
+
+.sized_index:hover {
+opacity:1;
+}
+
+/*.add_previous_next {
+/*position:relative;
+/*margin-left: -24px;
+/*margin-bottom: 0px;
+/*}
+
+.waiting_screen {
+position:fixed;
+top:0px;
+left:0px;
+}
+.wt_add_class {
+width:100%;
+height:2000px;
+background-color:#242424;
+opacity:0.7;
+z-index:4444;
+}
+.waiting_screen .box_message {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50%;
+  width: 444px;
+  height:200px;
+  z-index:4445;
+  background-color:#fff;
+  position:relative;
+}*/
+
+.invisible {
+visibility: hidden;
+}
+.visible {
+visibility: visible;
+}
+
+._login_display {
+color:#fff;
+font-weight: 500;
+position: relative;
+float:left;
+margin-top:20px;
+margin-left:24px;
+display:inline;
+}
+
+.logout {
+color:#fff;
+font-weight: 500;
+position: relative;
+float:right;
+margin-top:20px;
+margin-right:24px;
+display:inline;
+text-decoration: none;
+}
+.menu .logout img{
+max-height:20px;
+display:inline;
+margin-right:4px;
+}
+
+.box_alert {
+width:300px;
+height:24px;
+margin-top:24px;
+color:#dd0000;
+}
+
+._login_field {
+margin-top:20px;
+}
+
+.heading .title {
+background-color: #81bd1b;
+font-weight: 500;
+text-align: center;
+text-transform: uppercase;
+color: #fff;
+}
+
+.heading_b .title_b {
+background-color: #fff;
+font-weight: 500;
+text-align: center;
+text-transform: uppercase;
+color: #81bd1b;
+}
+.p_form {
+display:block;
+margin-top: 4px;
+color: #ababab;
+}
+.relatived_form {
+display: block;
+font-family: 'Montserrat','Source Sans Pro', sans-serif;
+margin-top: 4px;
+font-weight:400;
+font-size:14px;
+color:#575454;
+border: 2px solid #d4d4d4;
+}
+.relatived_form_inline {
+display: inline;
+margin-top: 4px;
+}
+.menu {
+width:100%;
+height: 64px;
+background: #354f9a;
+}
+
+.menu img {
+display: flex;
+float: left;
+position: relative;
+background: none;
+max-height:64px;
+}
+
+.form_field {
+font-size:14px;
+color: #e06611;
+width:100%;
+
+/* HIDE overflow */
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.grey_font {
+color: #ababab;
+}
+
+/* Separators */
+.delimiters_v {
+height:6px;
+/*width:100%;*/
+/*border: 1px dotted #000;*/
+background-image: url("../img/bande_grise_oblique.png");
+margin-top: 6px;
+margin-bottom: 6px;
+}
+
+.ajax_loader {
+max-height:44px;
+max-width:24px;
+/*width:100%;*/
+/*border: 1px dotted #000;*/
+background-image: url("../img/ajax-loader.gif");
+visible:hidden;
+}
+
+.btn {
+font-family: 'Montserrat','Source Sans Pro', sans-serif;
+font-size:14px;
+color: #fff;
+/*width:100%;*/
+}
+.btn:hover {
+background-color:#fff;
+cursor:pointer;
+}
+.small_btn {
+font-size:14px;
+color: #fff;
+width:20px;
+height:22px;
+float:right;
+}
+
+.small {
+width:20px;
+}
+.mid {
+width:44px;
+}
+.large {
+width:64px;
+}
+.xlarge {
+width:100%;
+}
+
+/*BEGIN FORM LAYER */
+.select_layer {
+border: 2px solid #d4d4d4;
+margin-top: 8px;
+margin-left: auto;
+width: 100%;
+font-size:14px;
+font-weight:600;
+color: #e06611;
+}
+.select_analyses{
+border: 2px solid #d4d4d4;
+margin-top: 8px;
+margin-left: auto;
+width: 250px;
+font-size:14px;
+font-weight:600;
+color: #ababab;
+overflow:hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+.relance_analyse {
+width: 250px;
+}
+.input_text {
+border: 2px solid #d4d4d4;
+margin-top: 8px;
+margin-left: auto;
+width: 99%;
+font-size:14px;
+font-weight:600;
+color: #808080;
+}
+/*END FORM LAYER */
+
+/* COLORS FOR BUTTON AND BUTTON HOVER */
+.orange {
+background-color:#e06611;
+color: #fff;
+border: 2px solid #e06611;
+}
+.orange:hover {
+color: #e06611;
+border: 2px solid #e06611;
+}
+.blue {
+background-color:#354f9a;
+color: #fff;
+border: 2px solid #354f9a;
+}
+.blue:hover {
+color: #354f9a;
+border: 2px solid #354f9a;
+}
+.green {
+background-color:#81bd1b;
+color: #fff;
+border: 2px solid #81bd1b;
+}
+.green:hover {
+color: #81bd1b;
+border: 2px solid #81bd1b;
+}
+.purple {
+background-color:#8017d8;
+color: #fff;
+border: 2px solid #8017d8;
+}
+.purple:hover {
+color: #8017d8;
+border: 2px solid #8017d8;
+}
+.red {
+background-color:#ab1111;
+color: #fff;
+border: 2px solid #ab1111;
+}
+.red:hover {
+color: #ab1111;
+border: 2px solid #ab1111;
+}
+.grey {
+background-color:#d4d4d4;
+color: #fff;
+border: 2px solid #d4d4d4;
+}
+.grey:hover {
+color: #d4d4d4;
+border: 2px solid #d4d4d4;
+}
+.bg_color_grey {
+background-color:#d4d4d4;
+}
+
+.log_passwd {
+font-height:4px;
+}
+.extra_small {
+background-color:#354f9a;
+color:#fff;
+font-size:8px;
+float:left;
+width:100%;
+}
+.extra_small p {
+margin-left:4px;
+}
+
+
+.float_block {
+/* top right bottom left */
+display: inline-block;
+position: relative;
+float: left;
+margin: 16px 4px 4px 0;
+}
+/*
+.field_inline {
+    clear:both;
+    float:left;
+}
+.field_inline .btn {
+    width:45%;
+}
+.field_inline .input_text {
+    width:45%;
+    margin-top:2px;
+}
+*/
+
+/* Table of Contents
+==================================================
+    #Base 960 Grid
+    #Tablet (Portrait)
+    #Mobile (Portrait)
+    #Mobile (Landscape)
+    #Clearing */
+
+
+
+/* #Base 960 Grid
+================================================== */
+
+    .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }
+    .container .column,
+    .container .columns                         { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+    .row                                        { margin-bottom: 20px; }
+	.row-block                              { margin-bottom: 4px; position: fixed; margin-top: 0px}
+
+    /* Nested Column Classes */
+    .column.alpha, .columns.alpha               { margin-left: 0; }
+    .column.omega, .columns.omega               { margin-right: 0; }
+
+    /* Base Grid */
+    .container .one.column,
+    .container .one.columns                     { width: 40px;  }
+    .container .two.columns                     { width: 100px; }
+    .container .three.columns                   { width: 160px; }
+    .container .four.columns                    { width: 220px; }
+    .container .five.columns                    { width: 280px; }
+    .container .six.columns                     { width: 340px; }
+    .container .seven.columns                   { width: 400px; }
+    .container .eight.columns                   { width: 460px; }
+    .container .nine.columns                    { width: 520px; }
+    .container .ten.columns                     { width: 580px; }
+    .container .eleven.columns                  { width: 640px; }
+    .container .twelve.columns                  { width: 700px; }
+    .container .thirteen.columns                { width: 760px; }
+    .container .fourteen.columns                { width: 820px; }
+    .container .fifteen.columns                 { width: 880px; }
+    .container .sixteen.columns                 { width: 940px; }
+
+    .container .one-third.column                { width: 300px; }
+    .container .two-thirds.column               { width: 620px; }
+
+    /* Offsets */
+    .container .offset-by-one                   { padding-left: 60px;  }
+    .container .offset-by-two                   { padding-left: 120px; }
+    .container .offset-by-three                 { padding-left: 180px; }
+    .container .offset-by-four                  { padding-left: 240px; }
+    .container .offset-by-five                  { padding-left: 300px; }
+    .container .offset-by-six                   { padding-left: 360px; }
+    .container .offset-by-seven                 { padding-left: 420px; }
+    .container .offset-by-eight                 { padding-left: 480px; }
+    .container .offset-by-nine                  { padding-left: 540px; }
+    .container .offset-by-ten                   { padding-left: 600px; }
+    .container .offset-by-eleven                { padding-left: 660px; }
+    .container .offset-by-twelve                { padding-left: 720px; }
+    .container .offset-by-thirteen              { padding-left: 780px; }
+    .container .offset-by-fourteen              { padding-left: 840px; }
+    .container .offset-by-fifteen               { padding-left: 900px; }
+
+
+
+/* #Tablet (Portrait)
+================================================== */
+
+    /* Note: Design for a width of 768px */
+
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+        .container                                  { width: 768px; }
+        .container .column,
+        .container .columns                         { margin-left: 10px; margin-right: 10px;  }
+        .column.alpha, .columns.alpha               { margin-left: 0; margin-right: 10px; }
+        .column.omega, .columns.omega               { margin-right: 0; margin-left: 10px; }
+        .alpha.omega                                { margin-left: 0; margin-right: 0; }
+
+        .container .one.column,
+        .container .one.columns                     { width: 28px; }
+        .container .two.columns                     { width: 76px; }
+        .container .three.columns                   { width: 124px; }
+        .container .four.columns                    { width: 172px; }
+        .container .five.columns                    { width: 220px; }
+        .container .six.columns                     { width: 268px; }
+        .container .seven.columns                   { width: 316px; }
+        .container .eight.columns                   { width: 364px; }
+        .container .nine.columns                    { width: 412px; }
+        .container .ten.columns                     { width: 460px; }
+        .container .eleven.columns                  { width: 508px; }
+        .container .twelve.columns                  { width: 556px; }
+        .container .thirteen.columns                { width: 604px; }
+        .container .fourteen.columns                { width: 652px; }
+        .container .fifteen.columns                 { width: 700px; }
+        .container .sixteen.columns                 { width: 748px; }
+
+        .container .one-third.column                { width: 236px; }
+        .container .two-thirds.column               { width: 492px; }
+
+        /* Offsets */
+        .container .offset-by-one                   { padding-left: 48px; }
+        .container .offset-by-two                   { padding-left: 96px; }
+        .container .offset-by-three                 { padding-left: 144px; }
+        .container .offset-by-four                  { padding-left: 192px; }
+        .container .offset-by-five                  { padding-left: 240px; }
+        .container .offset-by-six                   { padding-left: 288px; }
+        .container .offset-by-seven                 { padding-left: 336px; }
+        .container .offset-by-eight                 { padding-left: 384px; }
+        .container .offset-by-nine                  { padding-left: 432px; }
+        .container .offset-by-ten                   { padding-left: 480px; }
+        .container .offset-by-eleven                { padding-left: 528px; }
+        .container .offset-by-twelve                { padding-left: 576px; }
+        .container .offset-by-thirteen              { padding-left: 624px; }
+        .container .offset-by-fourteen              { padding-left: 672px; }
+        .container .offset-by-fifteen               { padding-left: 720px; }
+	}
+
+
+/*  #Mobile (Portrait)
+================================================== */
+
+    /* Note: Design for a width of 320px */
+
+    @media only screen and (max-width: 767px) {
+        .container { width: 300px; }
+        .container .columns,
+        .container .column { margin: 0; }
+
+        .container .one.column,
+        .container .one.columns,
+        .container .two.columns,
+        .container .three.columns,
+        .container .four.columns,
+        .container .five.columns,
+        .container .six.columns,
+        .container .seven.columns,
+        .container .eight.columns,
+        .container .nine.columns,
+        .container .ten.columns,
+        .container .eleven.columns,
+        .container .twelve.columns,
+        .container .thirteen.columns,
+        .container .fourteen.columns,
+        .container .fifteen.columns,
+        .container .sixteen.columns,
+        .container .one-third.column,
+        .container .two-thirds.column  { width: 300px; }
+
+        /* Offsets */
+        .container .offset-by-one,
+        .container .offset-by-two,
+        .container .offset-by-three,
+        .container .offset-by-four,
+        .container .offset-by-five,
+        .container .offset-by-six,
+        .container .offset-by-seven,
+        .container .offset-by-eight,
+        .container .offset-by-nine,
+        .container .offset-by-ten,
+        .container .offset-by-eleven,
+        .container .offset-by-twelve,
+        .container .offset-by-thirteen,
+        .container .offset-by-fourteen,
+        .container .offset-by-fifteen { padding-left: 0; }
+}
+
+
+/* #Mobile (Landscape)
+================================================== */
+
+    /* Note: Design for a width of 480px */
+
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+        .container { width: 420px; }
+        .container .columns,
+        .container .column { margin: 0; }
+
+        .container .one.column,
+        .container .one.columns,
+        .container .two.columns,
+        .container .three.columns,
+        .container .four.columns,
+        .container .five.columns,
+        .container .six.columns,
+        .container .seven.columns,
+        .container .eight.columns,
+        .container .nine.columns,
+        .container .ten.columns,
+        .container .eleven.columns,
+        .container .twelve.columns,
+        .container .thirteen.columns,
+        .container .fourteen.columns,
+        .container .fifteen.columns,
+        .container .sixteen.columns,
+        .container .one-third.column,
+        .container .two-thirds.column { width: 420px; }
+        
+	}
+
+
+/* #Clearing
+================================================== */
+
+    /* Self Clearing Goodness */
+    .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row:after,
+    .clearfix:after {
+      clear: both; }
+    .row,
+    .clearfix {
+      zoom: 1; }
+    
+    /* You can also use a <br class="clear" /> to clear columns */
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
