@@ -891,8 +891,8 @@ $menu_on = stripos($_SERVER['REQUEST_URI'], 'infos.php') ? "men_li_d" : "men_li"
                 <label for="liste_layer_reference">Choisir un contour de référence :</label>
                 <select class="form-control form-control-sm" id="liste_layer_reference">
                     <option id="f_0" table_name=" null " >----</option>
-                    <option id="f_1" table_name=" layers.communes_2018 " >Commune</option>
-                    <option id="f_2" table_name=" layers.epci_2018 " >EPCI</option>
+                    <option id="f_1" table_name="<?php echo $communes; ?>" >Commune</option>
+                    <option id="f_2" table_name="<?php echo $epci; ?>" >EPCI</option>
                 </select>
                 <div id="loader_layers" class="loader visible_s">
                     <img style="width:20px;height:20px;" src ="./img/spin.png" class="m-1 rotate_"/>Chargement du fond cartographique...
@@ -2314,7 +2314,6 @@ function loc_end(result) {
         alert("Localisation enregistrée !");
         console.log("click");
     }
-    change_load ('Re-Chargement des mares...');
     display_mares_in_area(sessionStorage.getItem('id_search'), sessionStorage.getItem('table_name_search'));
     emptied_selected_mare();
     resetModals();
@@ -2528,7 +2527,6 @@ $("#save_car").on('click', function() {
             success: function( data ) {
                 if(data) {alert("caractérisation enregistrée !");  };update = false;// $('#modalCar').modal('hide');
                 $('#modalCar').modal('hide');
-                change_load ('Re-Chargement des mares...');
                 display_mares_in_area(sessionStorage.getItem('id_search'), sessionStorage.getItem('table_name_search'));
             }
             });
@@ -2628,7 +2626,6 @@ $("#delete_mare_ended").click( function () {
                         id_plus : id_plus
                     },
                     success: function( data ) {
-                        change_load ('Re-Chargement des mares...');
                         display_mares_in_area(sessionStorage.getItem('id_search'), sessionStorage.getItem('table_name_search'));
                         $('#modalDelete').modal('toggle');
                     }

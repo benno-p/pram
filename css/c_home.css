@@ -159,54 +159,7 @@ table.dataTable td{
 .tooltip_c:hover {
     opacity:1;
 }
-/* TOOLTIP CAPTCHA */
-.tooltip_c {
-  position: relative;
-  display: inline-block;
-  opacity:0.2;
-}
-.tooltip_c .tooltiptext {
-  visibility: hidden;
-  width: 240px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  top: -5px;
-  right: 100%; 
-}
-.tooltip_c:hover .tooltiptext {
-  visibility: visible;
-  opacity:1;
-}
 
-.loc_blue {
-    /*background-color: #dde9fc;*/
-    padding-bottom: 12px;
-    border: 2px solid #276090;
-    margin-bottom:12px;
-}
-.car_green {
-    /*background-color: #dde9fc;*/
-    padding-bottom: 12px;
-    border: 4px solid #439d43;
-    margin-bottom:12px;
-}
-.photo_orange {
-    padding-bottom: 12px;
-    border: 2px solid #f0ad4e;
-    margin-bottom:12px;
-}
-.eee_ {
-    border: 1px dotted #646464;
-}
-.delete_mare_red {
-    padding-bottom: 12px;
-    border: 2px solid #d9534f;
-    margin-bottom:12px;
-}
 .link_delete {
     color:#fff;
     font-weight:800;

@@ -822,7 +822,7 @@ function add_hover_odkform_event() {
     $('[id^=cancel_import_odk]').click(function() {
         ///////////////////////////////////////////////////
         ///////////////////////////////////////////////////
-        //VALIDER LE FORMULAIRE ODK
+        //Supprimer LE FORMULAIRE ODK
         ///////////////////////////////////////////////////
         ///////////////////////////////////////////////////
         console.log('CANCEL'+ $(this).attr('id').split('|')[1]);
@@ -925,7 +925,7 @@ function display_photo_blob(id) {
 
 function map_up (bool,state) {
     if (bool) {
-        $('#map').css('z-index',1049);
+        $('#map').css('z-index',1051);
         switch(state) {
             case "localisation":
                 loc_plus = true;
@@ -1396,10 +1396,10 @@ $("#liste_layer_reference").on('change', function() {
     semi_geojson.clearLayers();
     if (table_name != ' null ') {
         switch(table_name) {
-        case ' layers.communes_2018 ':
+        case ' layers.communes ':
             specifik = 'nope';
             break;
-        case ' layers.epci_2018 ':
+        case ' layers.epci ':
             specifik = 'nope';
             // code block
             break;

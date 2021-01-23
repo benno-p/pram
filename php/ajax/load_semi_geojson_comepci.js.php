@@ -24,7 +24,7 @@ FROM (SELECT 'Feature' As type
    , ST_AsGeoJSON( st_transform(ST_SnapToGrid(lg.l_geom, 0.0007),4326) )::json As geometry
    , row_to_json(lp) As properties
   FROM ".$_POST["table_name"]." As lg 
-        INNER JOIN (SELECT l_id, l_nom, '".$_POST["table_name"]."' as table_name FROM ".$_POST["table_name"]." ) As lp 
+        INNER JOIN (SELECT l_id, l_nom, '".$_POST["table_name"]."' as table_name FROM ".$_POST["table_name"]." WHERE display is true ) As lp 
       ON lg.l_id = lp.l_id ) As f )  As fc";
 }
 //echo $sql;

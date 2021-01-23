@@ -60,21 +60,6 @@ $menu_on = stripos($_SERVER['REQUEST_URI'], 'infos.php') ? "men_li_d" : "men_li"
                 <i class="mx-2 fas fa-home"></i>Accueil
             </a>
         </li>
-        <!--<li class="nav-item">
-        <!--    <a class="nav-link collapsed text-light" href="#" data-toggle="collapse" data-target="#collapseSaisie" aria-expanded="false" aria-controls="collapseSaisie">
-        <!--        <i class="mx-2 fas fa-edit"></i>Saisie
-        <!--    </a>
-        <!--    <div id="collapseSaisie" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
-        <!--    <div class=" py-2 collapse-inner d-flex flex-column"  style="color:#004ea1;">
-        <!--        <div class="d-flex"><div id="mare_loc_menu"     class="<?php //echo $menu_on; ?> btn btn-primary btn-sm m-2 justify-content-start" ><i class="fa fa-plus-circle"></i> Localisation</div></div>
-        <!--        <div class="d-flex"><div id="mare_car_menu"     class="<?php //echo $menu_on; ?> btn btn-success btn-sm m-2" ><i class="fa fa-plus-circle"></i> Caractérisation</div></div>
-        <!--        <div class="d-flex"><div id="mare_photo_menu"   class="<?php //echo $menu_on; ?> btn btn-yellowed btn-sm m-2" ><i class="fa fa-plus-circle"></i> Photo</div></div>
-        <!--        <div class="d-flex"><div id="mare_delete_menu"  class="<?php //echo $menu_on; ?> btn btn-danger btn-sm m-2" ><i class="fa fa-minus-circle"></i> Mare</div></div>
-        <!--        <div class="d-flex"><div id="mare_espece_menu"  class="<?php //echo $menu_on; ?> btn btn-purple btn-sm m-2" data-toggle="modal" data-target="#modalSpecies"><i class="fa fa-plus-circle"></i> Espèces</div></div>
-        <!--        <div class="d-flex"><div id="mare_travaux_menu" class="<?php //echo $menu_on; ?> btn btn-pink btn-sm m-2" data-toggle="modal" data-target="#modalTravaux"><i class="fa fa-plus-circle"></i> Travaux</div></div>
-        <!--    </div>
-        <!--    </div>
-        <!--</li>-->
         <li class="nav-item mx-2 my-2">
             <a class="nav-link collapsed text-light" href="#" data-toggle="collapse" data-target="#collapseExport" aria-expanded="false" aria-controls="collapseExport">
                 <i class="mx-2 fas fa-file-export"></i>Export
@@ -110,7 +95,6 @@ $menu_on = stripos($_SERVER['REQUEST_URI'], 'infos.php') ? "men_li_d" : "men_li"
             <div id="collapseMobile" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
             <div class="collapse-inner d-flex flex-column border border-secondary border-right-0 border-left-0 pl-2"  style="">
                 <a id="valid_android" class="m-2 small text-light <?php echo $menu_on; ?>" ><i class="fab fa-android"></i> Saisies avec ODK</a>
-                <a id="valid_android" class="m-2 small text-light <?php echo $menu_on; ?>" ><i class="fab fa-android"></i> Saisies avec Géomare</a>
             </div>
             </div>
         </li>
