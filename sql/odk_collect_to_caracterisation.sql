@@ -30,10 +30,11 @@ with
 		select "_PARENT_AURI", string_agg(replace("EVEE",'_',' ')||'__'||replace("EVEE_REC",'_',' '),'|') AS evee FROM odk_prod_rio."PRAM_OBS_DATA_ECOLOGIE_EVEE" group by 1
 		)
 select
+o."_URI" as id_,
 --car_id_plus,
 --loc_id_plus,
 --loc_id_strp,
-"DATA_GLOBAL_DATE_MARE",
+"DATA_GLOBAL_DATE_MARE" as date_,
 "EMAIL",
 --car_strp,
 "DATA_GLOBAL_TYPE_MARE",
@@ -97,5 +98,5 @@ FROM odk_prod_rio."PRAM_OBS_CORE" o
 	LEFT JOIN usage on (o."_URI" = usage."_PARENT_AURI" )
 	LEFT JOIN eaee on (o."_URI" = eaee."_PARENT_AURI")
 	LEFT JOIN evee on (o."_URI" =evee."_PARENT_AURI" )
-	
+
 	
