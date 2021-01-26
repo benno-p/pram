@@ -1052,15 +1052,15 @@ $menu_on = stripos($_SERVER['REQUEST_URI'], 'infos.php') ? "men_li_d" : "men_li"
                                     <label for="car_type" class="font-weight-bold">Type de mare* :</label>
                                     <select id="car_type" class="custom-select custom-select-sm" placeholder="----"required>
                                         <option>----</option>
-                                        <option>de prairie</option>
-                                        <option>de culture</option>
-                                        <option>de forêt</option>
-                                        <option>de friche</option>
-                                        <option>de marais</option>
-                                        <option>de carrière</option>
-                                        <option>bassin routier ou de décantation</option>
-                                        <option>de village, de ferme, de parc ou jardin</option>
-                                        <option>je ne sais pas</option>
+                                        <option>De prairie</option>
+                                        <option>De culture</option>
+                                        <option>De forêt</option>
+                                        <option>De friche</option>
+                                        <option>De marais</option>
+                                        <option>De carrière</option>
+                                        <option>Bassin routier ou de décantation</option>
+                                        <option>De village, de ferme, de parc ou jardin</option>
+                                        <option>Je ne sais pas</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -1278,10 +1278,10 @@ $menu_on = stripos($_SERVER['REQUEST_URI'], 'infos.php') ? "men_li_d" : "men_li"
                                     <label for="car_topo" class="font-weight-bold">Topographie :</label>
                                     <select id="car_topo" class="custom-select custom-select-sm" placeholder="----" >
                                         <option>----</option>
-                                        <option>plateau</option>
-                                        <option>versant</option>
-                                        <option>fond de vallée</option>
-                                        <option>autre</option>
+                                        <option>Plateau</option>
+                                        <option>Versant</option>
+                                        <option>Fond de vallée</option>
+                                        <option>Autre</option>
                                     </select>
                                     <input id="car_topo_autre" class="form-control form-control-sm d-none" placeholder="..." type="text" >
                                 </div>
@@ -1289,9 +1289,9 @@ $menu_on = stripos($_SERVER['REQUEST_URI'], 'infos.php') ? "men_li_d" : "men_li"
                                     <label for="car_cloture" class="font-weight-bold">Mare clôturée :</label>
                                     <select id="car_cloture" class="custom-select custom-select-sm" placeholder="----" >
                                         <option>----</option>
-                                        <option>non</option>
-                                        <option>en partie</option>
-                                        <option>totalement</option>
+                                        <option>Non</option>
+                                        <option>En partie</option>
+                                        <option>Totalement</option>
                                     </select>
                                 </div>
                                 <div class="form-group"> 
@@ -1307,72 +1307,72 @@ $menu_on = stripos($_SERVER['REQUEST_URI'], 'infos.php') ? "men_li_d" : "men_li"
                                 <form id="car_contextes" >
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label" >
-                                            <input value="marais continental salé ou saumâtre" name="car_contextes" type="checkbox" class="form-check-input" >marais continental salé ou saumâtre
+                                            <input value="marais continental salé ou saumâtre" name="car_contextes" type="checkbox" class="form-check-input" >Marais continental salé ou saumâtre
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="pelouse sècheDéchets verts" name="car_contextes" type="checkbox" class="form-check-input" >pelouse sècheDéchets verts
+                                            <input value="pelouse sècheDéchets verts" name="car_contextes" type="checkbox" class="form-check-input" >Pelouse sècheDéchets verts
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="prairie mésophile" name="car_contextes" type="checkbox" class="form-check-input" >prairie mésophile
+                                            <input value="prairie mésophile" name="car_contextes" type="checkbox" class="form-check-input" >Prairie mésophile
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="prairie humide" name="car_contextes" type="checkbox" class="form-check-input" >prairie humide
+                                            <input value="prairie humide" name="car_contextes" type="checkbox" class="form-check-input" >Prairie humide
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="fourrés, bosquets" name="car_contextes" type="checkbox" class="form-check-input" >fourrés, bosquets
+                                            <input value="fourrés, bosquets" name="car_contextes" type="checkbox" class="form-check-input" >Fourrés, bosquets
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="lande humide" name="car_contextes" type="checkbox" class="form-check-input" >lande humide
+                                            <input value="lande humide" name="car_contextes" type="checkbox" class="form-check-input" >Lande humide
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label" >
-                                            <input value="lande sèche" name="car_contextes" type="checkbox" class="form-check-input" >lande sèche
+                                            <input value="lande sèche" name="car_contextes" type="checkbox" class="form-check-input" >Lande sèche
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="bois de feuillus" name="car_contextes" type="checkbox" class="form-check-input" >bois de feuillus
+                                            <input value="bois de feuillus" name="car_contextes" type="checkbox" class="form-check-input" >Bois de feuillus
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="bois de résineux" name="car_contextes" type="checkbox" class="form-check-input" >bois de résineux
+                                            <input value="bois de résineux" name="car_contextes" type="checkbox" class="form-check-input" >Bois de résineux
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="culture" name="car_contextes" type="checkbox" class="form-check-input" >culture
+                                            <input value="culture" name="car_contextes" type="checkbox" class="form-check-input" >Culture
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="jardin, parc, cour (de ferme)" name="car_contextes" type="checkbox" class="form-check-input" >jardin, parc, cour (de ferme)
+                                            <input value="jardin, parc, cour (de ferme)" name="car_contextes" type="checkbox" class="form-check-input" >Jardin, parc, cour (de ferme)
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="carrière" name="car_contextes" type="checkbox" class="form-check-input" >carrière
+                                            <input value="carrière" name="car_contextes" type="checkbox" class="form-check-input" >Carrière
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label" >
-                                            <input value="annexe routière / ferrovière" name="car_contextes" type="checkbox" class="form-check-input" >annexe routière / ferrovière
+                                            <input value="annexe routière / ferrovière" name="car_contextes" type="checkbox" class="form-check-input" >Annexe routière / ferrovière
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="indéterminé" name="car_contextes" type="checkbox" class="form-check-input" >indéterminé
+                                            <input value="indéterminé" name="car_contextes" type="checkbox" class="form-check-input" >Indéterminé
                                         </label>
                                     </div>
                                 </form>
@@ -1424,11 +1424,11 @@ $menu_on = stripos($_SERVER['REQUEST_URI'], 'infos.php') ? "men_li_d" : "men_li"
                                     <label for="car_forme" class="font-weight-bold">Forme de la mare :</label>
                                     <select id="car_forme" class="custom-select custom-select-sm" placeholder="----" >
                                         <option>----</option>
-                                        <option>ronde / ovale</option>
-                                        <option>triangle</option>
-                                        <option>carré / rectangle</option>
-                                        <option>patatoïde</option>
-                                        <option>complexe (en U )</option>
+                                        <option>Ronde / ovale</option>
+                                        <option>Triangle</option>
+                                        <option>Carré / rectangle</option>
+                                        <option>Patatoïde</option>
+                                        <option>Complexe (en u )</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -1516,38 +1516,38 @@ $menu_on = stripos($_SERVER['REQUEST_URI'], 'infos.php') ? "men_li_d" : "men_li"
                                 <label class="font-weight-bold">Liaison(s) réseau hydro. superficiel :</label>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label" >
-                                            <input value="aucune" name="car_liaisons" type="checkbox" class="form-check-input" >aucune
+                                            <input value="aucune" name="car_liaisons" type="checkbox" class="form-check-input" >Aucune
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="fossés, noues" name="car_liaisons" type="checkbox" class="form-check-input" >fossés, noues
+                                            <input value="fossés, noues" name="car_liaisons" type="checkbox" class="form-check-input" >Fossés, noues
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="drainage/pompage" name="car_liaisons" type="checkbox" class="form-check-input" >drainage/pompage
+                                            <input value="drainage/pompage" name="car_liaisons" type="checkbox" class="form-check-input" >Drainage/pompage
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="cours d'eau" name="car_liaisons" type="checkbox" class="form-check-input" >cours d'eau
+                                            <input value="cours d'eau" name="car_liaisons" type="checkbox" class="form-check-input" >Cours d'eau
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="axe de ruisselement" name="car_liaisons" type="checkbox" class="form-check-input" >axe de ruisselement
+                                            <input value="axe de ruisselement" name="car_liaisons" type="checkbox" class="form-check-input" >Axe de ruisselement
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="autre" name="car_liaisons" id="car_liaisons_cx" type="checkbox" class="form-check-input" >autre
+                                            <input value="autre" name="car_liaisons" id="car_liaisons_cx" type="checkbox" class="form-check-input" >Autre
                                         </label>
                                         <input id="car_liaisons_autre" class="form-control form-control-sm d-none" placeholder="..." type="text" >
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="indéterminé" name="car_liaisons" type="checkbox" class="form-check-input" >indéterminé
+                                            <input value="indéterminé" name="car_liaisons" type="checkbox" class="form-check-input" >Indéterminé
                                         </label>
                                     </div>
                             </div>
@@ -1556,43 +1556,43 @@ $menu_on = stripos($_SERVER['REQUEST_URI'], 'infos.php') ? "men_li_d" : "men_li"
                                 <form >
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label" >
-                                            <input value="aucune" name="car_alimentations" type="checkbox" class="form-check-input" >aucune
+                                            <input value="aucune" name="car_alimentations" type="checkbox" class="form-check-input" >Aucune
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="ruisselement voirie" name="car_alimentations" type="checkbox" class="form-check-input" >ruisselement voirie
+                                            <input value="ruisselement voirie" name="car_alimentations" type="checkbox" class="form-check-input" >Ruisselement voirie
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="ruisselement culture" name="car_alimentations" type="checkbox" class="form-check-input" >ruisselement culture
+                                            <input value="ruisselement culture" name="car_alimentations" type="checkbox" class="form-check-input" >Ruisselement culture
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="source" name="car_alimentations" type="checkbox" class="form-check-input" >source
+                                            <input value="source" name="car_alimentations" type="checkbox" class="form-check-input" >Source
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="nappe" name="car_alimentations" type="checkbox" class="form-check-input" >nappe
+                                            <input value="nappe" name="car_alimentations" type="checkbox" class="form-check-input" >Nappe
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="pluvial bâti" name="car_alimentations" type="checkbox" class="form-check-input" >pluvial bâti
+                                            <input value="pluvial bâti" name="car_alimentations" type="checkbox" class="form-check-input" >Pluvial bâti
                                         </label>
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="autre" name="car_alimentations" id="car_alimentations_cx" type="checkbox" class="form-check-input" >autre
+                                            <input value="autre" name="car_alimentations" id="car_alimentations_cx" type="checkbox" class="form-check-input" >Autre
                                         </label>
                                         <input id="car_alimentations_autre" class="form-control form-control-sm d-none" placeholder="..." type="text" >
                                     </div>
                                     <div class="form-group form-check mt-1 mb-0">
                                         <label class="form-check-label">
-                                            <input value="indéterminé" name="car_alimentations" type="checkbox" class="form-check-input" >indéterminé
+                                            <input value="indéterminé" name="car_alimentations" type="checkbox" class="form-check-input" >Indéterminé
                                         </label>
                                     </div>
                                     
