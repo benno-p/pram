@@ -517,9 +517,6 @@ function load_car_edit() {
     update = true;
     $("#modalCar").modal();
     id_car = $("#select_car").children("option:selected").attr("id");
-    
-    console.log(id_car);
-    
     //form_display(form_car_content,false);
     $("#add_car_id_form").text('ID mare : '+$('#mares_autocomplete').val());
     //caracterisation_events();
@@ -651,6 +648,7 @@ function load_car_edit() {
                             $('#eaee'+i_i).html("<td>"+ (i_i+1) +"</td><td><select id='template_eaee_"+(i_i)+"' class='form-control input-sm' >"+select_eaee_all+"</select></td>");
                             $('#tab_logic_eaee').append('<tr id="eaee'+(i_i+1)+'"></tr>');
                             $('#template_eaee_'+i_i).val(element);
+                            console.log(i_i);
                             i_i++;
                         });
                     }
@@ -664,6 +662,7 @@ function load_car_edit() {
                             $('#tab_logic_evee').append('<tr id="evee'+(j_j+1)+'"></tr>');
                             $('#template_evee_'+i_i).val(element.split("__")[0]);
                             $('#template_eveeprt_'+i_i).val(element.split("__")[1]);
+                            console.log(j_j);
                             j_j++;
                         });
                     }
@@ -1101,8 +1100,10 @@ function ei_events() {
         }
     });
     $("#add_row_evee").click(function(){
+        console.log("add");
         $('#evee'+j_j).html("<td>"+ (j_j+1) +"</td><td><select id='template_evee_"+(j_j)+"' class='custom-select custom-select' >"+select_evee_all+"</select></td><td><select id='template_eveeprt_"+(j_j)+"' class='custom-select custom-select'><option id='r0'>x<1%</option><option id='r1_"+(j_j)+"'>1-5%</option><option id='r2_"+(j_j)+"'>5-25%</option><option id='r3_"+(j_j)+"'>25-50%</option><option id='r4_"+(j_j)+"'>50-75%</option><option id='r5_"+(j_j)+"'>75-100%</option></select></td>");
         $('#tab_logic_evee').append('<tr id="evee'+(j_j+1)+'"></tr>');
+        console.log(j_j);
         j_j++;
     });
     $("#delete_row_evee").click(function(){

@@ -1717,7 +1717,7 @@ $menu_on = stripos($_SERVER['REQUEST_URI'], 'infos.php') ? "men_li_d" : "men_li"
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                    <tr id="eaee0"></tr>
+                                                    <!--<tr id="eaee0"></tr>-->
                                                     </tbody>
                                                 </table>
                                         </div>
@@ -1745,7 +1745,7 @@ $menu_on = stripos($_SERVER['REQUEST_URI'], 'infos.php') ? "men_li_d" : "men_li"
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                    <tr id="evee0"></tr>
+                                                    <!--<tr id="evee0"></tr>-->
                                                     </tbody>
                                                 </table>
                                         </div>
@@ -1987,8 +1987,8 @@ function resetModals () {
     update = false;
     $('input:checkbox').removeAttr('checked');
     $('input:radio').removeAttr('checked');
-    $('#tab_logic_eaee tbody').html("");
-    $('#tab_logic_evee tbody').html("");
+    $('#tab_logic_eaee tbody').html("<tr id='eaee0'></tr>");
+    $('#tab_logic_evee tbody').html("<tr id='evee0'></tr>");
     $('#odkz').html("");
     $("#car_id_update").text("");
     $("#save_car").text("+ Enregistrer la nouvelle caractérisation");
