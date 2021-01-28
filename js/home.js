@@ -817,6 +817,21 @@ function add_hover_odkform_event() {
         ///////////////////////////////////////////////////
         ///////////////////////////////////////////////////
         console.log('IMPORT'+ $(this).attr('id').split('|')[1]);
+        $.ajax({
+            type : 'POST',
+            url: "php/ajax/odk/valide_odkform_obs.js.php",
+            data: {uuid : $(this).attr('id').split('|')[1]},
+            async    : true,
+            error    : function(request, error) { alert("Erreur : responseText: "+request.responseText);},
+            dataType : "json",
+            success: function(data) {
+                            console.log(data);
+                            $('#modalOdk').modal('hide');
+                            map.removeLayer(marker);
+                            alert('Mare importé avec succès');
+                        }
+        });
+        
     });
     $('[id^=cancel_import_odk]').click(function() {
         ///////////////////////////////////////////////////

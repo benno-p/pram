@@ -2462,7 +2462,7 @@ $("#save_car").on('click', function() {
                 car_comt : car_comt
             },
             success: function( data ) {
-                if(data) {alert("Modification de la caractérisation enregistrée !");update = false;}
+                if(data) {alert("Modification de la caractérisation enregistrée !");update = false;$('#modalCar').modal('hide');}
             }
         });
         } else {
