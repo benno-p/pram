@@ -1052,15 +1052,15 @@ $menu_on = stripos($_SERVER['REQUEST_URI'], 'infos.php') ? "men_li_d" : "men_li"
                                     <label for="car_type" class="font-weight-bold">Type de mare* :</label>
                                     <select id="car_type" class="custom-select custom-select-sm" placeholder="----"required>
                                         <option>----</option>
-                                        <option>De prairie</option>
-                                        <option>De culture</option>
-                                        <option>De forêt</option>
-                                        <option>De friche</option>
-                                        <option>De marais</option>
-                                        <option>De carrière</option>
-                                        <option>Bassin routier ou de décantation</option>
-                                        <option>De village, de ferme, de parc ou jardin</option>
-                                        <option>Je ne sais pas</option>
+                                        <option>Prairie</option>
+                                        <option>Culture</option>
+                                        <option>Forêt</option>
+                                        <option>Friche</option>
+                                        <option>Marais</option>
+                                        <option>Carrière</option>
+                                        <option>Bassin routier / decantation</option>
+                                        <option>Village, jardin, ferme</option>
+                                        <option>Indeterminé</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
