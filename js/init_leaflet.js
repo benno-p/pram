@@ -38,22 +38,22 @@ var contour_analyse={
 // create custom icon
 car = L.icon({
                 iconUrl: 'img/mare/caracterisee.png',
-                iconSize: [14, 14], 
+                iconSize: [16, 16], 
                 popupAnchor: [0,-12]
 });
 vue = L.icon({
                 iconUrl: 'img/mare/vue.png',
-                iconSize: [14, 14], 
+                iconSize: [16, 16], 
                 popupAnchor: [0,-12]
 });
 pot = L.icon({
                 iconUrl: 'img/mare/potentielle.png',
-                iconSize: [14, 14], 
+                iconSize: [16, 16], 
                 popupAnchor: [0,-12]
 });
 dis = L.icon({
                 iconUrl: 'img/mare/disparue.png',
-                iconSize: [14, 14], 
+                iconSize: [16, 16], 
                 popupAnchor: [0,-12]
 });
 a_car = L.icon({

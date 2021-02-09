@@ -122,10 +122,10 @@ $menu_on = stripos($_SERVER['REQUEST_URI'], 'infos.php') ? "men_li_d" : "men_li"
         </li>
         <div class="d-flex mt-auto justify-content-center">
             <div class="d-flex w-100 justify-content-between mt-1 mb-2 ml-2 mr-2 " >
-                    <img class="" style="max-width:40px;max-height:50px;opacity:0.8" src="img/logos/AESN.jpg" alt="AESN"/>
-                    <img class="" style="max-width:40px;max-height:50px;opacity:0.8" src="img/logos/Region.jpg" alt="Région Normandie"/>
-                    <img class="" style="max-width:40px;max-height:50px;opacity:0.8" src="img/logos/FEADER.jpg" alt="FEADER"/>
-                    <img class="" style="max-width:40px;max-height:50px;opacity:0.8" src="img/logos/AELB.jpg" alt="AELB"/>
+                    <img class="" style="max-width:40px;max-height:50px;opacity:0.8" src="img/logos/AESN.jpg" alt="AESN" data-toggle="tooltip" data-placement="top" title="AESN"/>
+                    <img class="" style="max-width:40px;max-height:50px;opacity:0.8" src="img/logos/Region.jpg" alt="Région Normandie" data-toggle="tooltip" data-placement="top" title="Région Normandie"/>
+                    <img class="" style="max-width:40px;max-height:50px;opacity:0.8" src="img/logos/FEADER.jpg" alt="FEADER" data-toggle="tooltip" data-placement="top" title="FEADER"/>
+                    <img class="" style="max-width:40px;max-height:50px;opacity:0.8" src="img/logos/AELB.jpg" alt="AELB" data-toggle="tooltip" data-placement="top" title="AELB"/>
             </div>
         </div>
     </ul>
@@ -141,19 +141,27 @@ $menu_on = stripos($_SERVER['REQUEST_URI'], 'infos.php') ? "men_li_d" : "men_li"
                     <div id="map" style="min-width:70%;height:600px;" ></div><!-- data-spy="affix" data-offset-top="60" -->
                     <div id="images_out" class="d-none" ></div>
                     <div class="d-flex flex-row flex-wrap align-content-end">
-                        <div class="mx-2"><img style="max-width:12px;max-height:12px;padding-right:2px;" src="img\mare\vue.png" /><small>Vue</small></div>
-                        <div class="mx-2"><img style="max-width:12px;max-height:12px;padding-right:2px;" src="img\mare\caracterisee.png" /><small>Caractérisée</small></div>
-                        <div class="mx-2"><img style="max-width:12px;max-height:12px;padding-right:2px;" src="img\mare\potentielle.png" /><small>Potentielle</small></div>
-                        <div class="mx-2"><img style="max-width:12px;max-height:12px;padding-right:2px;" src="img\mare\disparue.png" /><small>Disparue</small></div>
-                        <div class="mx-2"><input class="mr-1" type="checkbox" id="filter_myloc" checked><small>Mes localisations</small></input></div>
-                        <div class="mx-2"><input class="mr-1" type="checkbox" id="filter_loc_tierce" checked><small>Localisations tierces</small></input></div>
+                        <div class="mx-2"><img style="max-width:16px;max-height:16px;padding-right:2px;" src="img\mare\vue.png" /><small>Vue</small></div>
+                        <div class="mx-2"><img style="max-width:16px;max-height:16px;padding-right:2px;" src="img\mare\caracterisee.png" /><small>Caractérisée</small></div>
+                        <div class="mx-2"><img style="max-width:16px;max-height:16px;padding-right:2px;" src="img\mare\potentielle.png" /><small>Potentielle</small></div>
+                        <div class="mx-2"><img style="max-width:16px;max-height:16px;padding-right:2px;" src="img\mare\disparue.png" /><small>Disparue</small></div>
+                        <!--<div class="mx-2"><input class="mr-1" type="checkbox" id="filter_myloc" checked></div>-->
+                        <!--<div class="mx-2"><input class="mr-1" type="checkbox" id="filter_loc_tierce" checked><small>Localisations tierces</small><img style="max-width:16px;max-height:16px;" class="ml-1" src="img\mare\other.png" /></input></div>-->
+                        <div class="mx-2 custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="filter_myloc" checked>
+                            <label class="custom-control-label" for="filter_myloc"><small>Mes localisations</small><img style="max-width:16px;max-height:16px;" class="ml-1 mr-3" src="img\mare\mine.png" /></input></label>
+                        </div>
+                        <div class="mx-2 custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="filter_loc_tierce" checked>
+                            <label class="custom-control-label" for="filter_loc_tierce"><small>Localisations tierces</small><img style="max-width:16px;max-height:16px;" class="ml-1 mr-3" src="img\mare\other.png" /></input></label>
+                        </div>
                     </div>
                 </div>
                 <div class="d-flex flex-column pl-2 pr-2" style="min-width:30%;">
                     <div id="loader" class="loader visible_s">
                         <img style="width:20px;height:20px;" src ="./img/spin.png" class="m-1 rotate_"/>Loading
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-2">
                         <label for="layers_autocomplete">Rechercher un découpage administratif :</label>
                         <input id="layers_autocomplete" class="form-control" placeholder="" onblur="" aria-describedby="layersHelp" >
                         <small id="layersHelp" class="form-text text-muted">Commune, EPCI ...</small>
@@ -1940,6 +1948,11 @@ $menu_on = stripos($_SERVER['REQUEST_URI'], 'infos.php') ? "men_li_d" : "men_li"
 const absolute_path = $('#absolute_path').html();
 const cur_dir = $('#cur_dir').html();
 //const 
+
+//popover
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
 
 // LOAD HTML 
 // CARACTERISATION MODAL
