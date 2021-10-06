@@ -46,7 +46,7 @@
         </div>
         <!-- /.row -->
         <div class="">
-            <div class="col-lg-6 m-2">
+            <div class="d-flex flex-column w-50 m-2">
                 <h4>Connexion à l'application PRAM Normandie</h4>
                 <form role="form">
                     <div class="input-group w-50">
@@ -61,7 +61,10 @@
                         <button type="button" id="signin" class="btn btn-primary">Valider</button>
                     </div>
                 </form>
-                <a class="create_account point_er" data-toggle="modal" data-target="#CreateAccount">Création de compte</a>
+                <div class="my-2">
+                    <button type="button" class="btn btn-outline-success btn-sm my-2" data-bs-toggle="modal" data-bs-target="#CreateAccount">Création de compte</button>
+                </div>
+                
             </div>
             <div class="col-lg-6">
             </div>
@@ -153,10 +156,9 @@
 
 
 <!-- JQUERY-->
-<script src="js/jq3.5.js" ></script>
-<script src="js/popper.js"></script>
+<script src="js/jquery.js" ></script>
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.js"></script>
+<script src="bootstrap-5.0.0/js/bootstrap.min.js"></script>
 <!-- JQUERY AUTOCOMPLETE -->
 <!--<script src="js/plugins/jquery-ui-1.12.1.custom/jquery-ui.js" ></script>-->
     <!--Custom-->
@@ -164,12 +166,13 @@
     
     <script type="text/javascript">
     if (sessionStorage.getItem('trying') === 'account') {
-        $('#ModalLogin').modal();
+        $('#ModalLogin').show();
     }
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-        console.log("tooltiped");
-    })
+	$("#refresh").click( function () {
+		$("img#cap").attr("src","php/captcha.php?_="+((new Date()).getTime()));
+	});
+
+
     </script>
     
 </body>
