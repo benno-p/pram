@@ -17,8 +17,9 @@
     <link href="js/leaflet/plugins/leaflet_label/css/leafleat_label.css" rel="stylesheet" type="text/css">
     <link href="css/custom_leaflet.css" rel="stylesheet" type="text/css">
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/datatables.bootstrap4.5.min.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/datatables.bootstrap4.5.min.css" rel="stylesheet"> -->
+    <link href="bootstrap-5.0.0/css/bootstrap.min.css" rel="stylesheet">
     <!--Autocomplete UI -->
     <link href="css/plugins/jquery-ui.css" rel="stylesheet">
     <link href="css/plugins/ui_autocomplete.css" rel="stylesheet">
@@ -122,7 +123,7 @@ $menu_on = stripos($_SERVER['REQUEST_URI'], 'infos.php') ? "men_li_d" : "men_li"
             </a>
         </li>
         <div class="d-flex mt-auto justify-content-center">
-            <div class="d-flex w-100 justify-content-between mt-1 mb-2 ml-2 mr-2 " >
+            <div class="d-flex w-100 justify-content-around mt-1 mb-2 ml-2 mr-2 " >
                     <img class="" style="max-width:40px;max-height:50px;opacity:0.8" src="img/logos/AESN.jpg" alt="AESN" data-toggle="tooltip" data-placement="top" title="AESN"/>
                     <img class="" style="max-width:40px;max-height:50px;opacity:0.8" src="img/logos/Region.jpg" alt="Région Normandie" data-toggle="tooltip" data-placement="top" title="Région Normandie"/>
                     <img class="" style="max-width:40px;max-height:50px;opacity:0.8" src="img/logos/FEADER.jpg" alt="FEADER" data-toggle="tooltip" data-placement="top" title="FEADER"/>
@@ -158,7 +159,7 @@ $menu_on = stripos($_SERVER['REQUEST_URI'], 'infos.php') ? "men_li_d" : "men_li"
                         </div>
                     </div>
                 </div>
-                <div class="d-flex flex-column pl-2 pr-2" style="min-width:30%;">
+                <div class="d-flex flex-column p-2" style="min-width:30%;">
                     <div id="loader" class="loader visible_s">
                         <img style="width:20px;height:20px;" src ="./img/spin.png" class="m-1 rotate_"/>Loading
                     </div>
@@ -172,24 +173,24 @@ $menu_on = stripos($_SERVER['REQUEST_URI'], 'infos.php') ? "men_li_d" : "men_li"
                         <input id="mares_autocomplete" class="form-control" placeholder="" onblur="" aria-describedby="maresHelp">
                         <small id="maresHelp" class="form-text text-muted">5 caractères minimum (ex: 8FW2X) </small>
                     </div>
-                    <div class="d-flex  justify-content-start flex-column">
+                    <div class="d-flex  justify-content-start flex-column mt-4">
                         <div class="d-flex">
-                            <div id="add_loc" class=" btn btn-primary mt-2" ><i class="fa fa-plus-circle"></i> Localisation de mare</div><!--data-toggle="modal" data-target="#modalLoc"> -->
+                            <div id="add_loc" class=" btn btn-primary btn-sm mt-2" ><i class="fa fa-plus-circle"></i> Localisation de mare</div><!--data-toggle="modal" data-target="#modalLoc"> -->
                         </div>
                         <div class="d-flex">
-                            <div id="add_car" class="btn btn-success mt-2" ><i class="fa fa-plus-circle"></i> Caractérisation de mare</div>
+                            <div id="add_car" class="btn btn-success btn-sm mt-2" ><i class="fa fa-plus-circle"></i> Caractérisation de mare</div>
                         </div>
                         <div class="d-flex">
-                            <div id="add_photo" class="btn btn-yellowed mt-2" ><i class="fa fa-plus-circle"></i> Photo</div>
+                            <div id="add_photo" class="btn btn-yellowed btn-sm mt-2" ><i class="fa fa-plus-circle"></i> Photo</div>
                         </div>
                         <div class="d-flex">
-                            <div id="delete_mare" class="btn btn-danger mt-2" ><i class="fa fa-minus-circle"></i> Mare</div>
+                            <div id="delete_mare" class="btn btn-danger btn-sm mt-2" ><i class="fa fa-minus-circle"></i> Mare</div>
                         </div>
                         <div class="d-flex">
-                            <div id="add_spec" class="btn btn-purple mt-2" data-toggle="modal" data-target="#modalSpecies"><i class="fa fa-plus-circle"></i> Observation d'espèce</div>
+                            <div id="add_spec" class="btn btn-purple btn-sm mt-2" data-toggle="modal" data-target="#modalSpecies"><i class="fa fa-plus-circle"></i> Observation d'espèce</div>
                         </div>
                         <div class="d-flex">
-                            <div id="add_w" class="btn btn-pink mt-2" data-toggle="modal" data-target="#modalTravaux"><i class="fa fa-plus-circle"></i> Travaux</div>
+                            <div id="add_w" class="btn btn-pink  btn-sm mt-2" data-toggle="modal" data-target="#modalTravaux"><i class="fa fa-plus-circle"></i> Travaux</div>
                         </div>
                     </div>
                 </div>
@@ -201,50 +202,34 @@ $menu_on = stripos($_SERVER['REQUEST_URI'], 'infos.php') ? "men_li_d" : "men_li"
         </div>
     </div><!-- /#content-wrapper -->
 
-
-
 <!-- MODAL SPECIES -->
-<div class="modal fade " id="ModalSpecies" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
-  <div class="modal-dialog modal-full-height float-right modal-xl h-100 my-0" role="document">
-    <div class="modal-content h-100 my-0 ">
-      <div class="modal-header flex-column">
-        <div class="d-flex w-100">
-        <p class="modal-title text-muted" id="species_mare" style=""></p>
-        <div class="ml-auto">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-            </button>
+<div id="ModalSpecies" class="modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+        <div class="modal-header">
+            <p class="modal-title text-muted" id="species_mare" style=""></p>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        </div>
-      </div>
-      <div class="modal-body w-100">
-            <h4 class="font-weight-bold bg-secondary text-light ml-2 pl-2" style="">Nouvelles Observations :</h4><!--background-color:#773AC7;color:#fff;-->
-            <div class="eventInsForm d-flex">
+        <div class="modal-body">
+            <h4 class="font-weight-bold bg-secondary text-light ml-2 pl-2" style="">Nouvelles Observations :</h4>
+                <form id="formSpecies" class="">
                 <div class="d-flex flex-column w-25 mx-2 my-2">
-                    <form id="formSpecies" class="">
-                    <div class="d-flex flex-column">
-                            <label class="sm">Espèce :
-                                <input class="form-control form-control-sm" id="taxon_autocomplete" size="" placeholder="ex: Buffo | Rouge-gorge">
-                                    <div id="loader_modal_esp" class="loader visible_s">
-                                        <img style="width:20px;height:20px;" src ="./img/spin.png" class="m-1 rotate_"/>Recherche d'un taxon...
-                                    </div>
-                                </input>
-                            </label>
-                            <label>Date:
-                            <input id="esp_date" class="form-control form-control-sm" placeholder="JJ-MM-AAAA" type="text"></input>
-                            </label>
-                            <label>Effectif :
-                            <input class="form-control form-control-sm" type="number" min="0" id="esp_effectif" size="10" placeholder="Ex:2">
-                            </label>
-                            <label>Commentaires :
-                            <input class="form-control form-control-sm" id="esp_comt" size="10" placeholder="Ex: blablabla">
-                            </label>
-                    </div>
-                    </form>
-                    <div class="d-flex justify-content-between mx-1 my-1">
-                        <a id="add_row_esp" class="btn btn-purple "><strong>+</strong> esp</a>
-                        <a id="delete_row_esp" class=" btn btn-purple " ><strong>-</strong> esp</a>
-                    </div>
+                        <label class="sm">Espèce :
+                            <input class="form-control form-control-sm" id="taxon_autocomplete" size="" placeholder="ex: Buffo | Rouge-gorge">
+                                <div id="loader_modal_esp" class="loader visible_s">
+                                    <img style="width:20px;height:20px;" src ="./img/spin.png" class="m-1 rotate_"/>Recherche d'un taxon...
+                                </div>
+                            </input>
+                        </label>
+                        <label>Date:
+                        <input id="esp_date" class="form-control form-control-sm" placeholder="JJ-MM-AAAA" type="text"></input>
+                        </label>
+                        <label>Effectif :
+                        <input class="form-control form-control-sm" type="number" min="0" id="esp_effectif" size="10" placeholder="Ex:2">
+                        </label>
+                        <label>Commentaires :
+                        <input class="form-control form-control-sm" id="esp_comt" size="10" placeholder="Ex: blablabla">
+                        </label>
                 </div>
                 <div class="d-flex flex-column w-75 mx-2 my-2">
                     <div class="table-responsive" >
@@ -276,44 +261,50 @@ $menu_on = stripos($_SERVER['REQUEST_URI'], 'infos.php') ? "men_li_d" : "men_li"
                         </table>
                     </div>
                 </div>
-            </div>
-            <div class="d-flex w-100 justify-content-end mb-2">
-                <a href="" id="save_spec" class="btn btn-purple">Sauvegarder les observations</a>
-            </div>
-            <h4 class="font-weight-bold bg-secondary text-light ml-2 pl-2" style="">Observations Précédentes:</h4><!--background-color:#773AC7;color:#fff;-->
-            <div class="d-flex justify-content-center">
-                <div class="table-responsive" >
-                    <table id="ola_dt__" class="table table-bordered table-hover"><!-- dt-responsive-->
-                        <thead>
-                            <tr>
-                                <th class="text-center">
-                                    Espèce :
-                                </th>
-                                <th class="text-center">
-                                    Date :
-                                </th>
-                                <th class="text-center">
-                                    Effectif :
-                                </th>
-                                <th class="text-center">
-                                    Obs :
-                                </th>
-                                <th class="text-center">
-                                    Commentaire :
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
+                </form>
+                <div class="d-flex justify-content-between mx-1 my-1">
+                    <a id="add_row_esp" class="btn btn-purple "><strong>+</strong> esp</a>
+                    <a id="delete_row_esp" class=" btn btn-purple " ><strong>-</strong> esp</a>
                 </div>
-            </div>
-      </div>
-      <div class="modal-footer ">
-      </div>
+                <a href="" id="save_spec" class="btn btn-purple">Sauvegarder les observations</a>
+                <div class="d-flex justify-content-center">
+                    <div class="table-responsive" >
+                        <table id="ola_dt__" class="table table-bordered table-hover"><!-- dt-responsive-->
+                            <thead>
+                                <tr>
+                                    <th class="text-center">
+                                        Espèce :
+                                    </th>
+                                    <th class="text-center">
+                                        Date :
+                                    </th>
+                                    <th class="text-center">
+                                        Effectif :
+                                    </th>
+                                    <th class="text-center">
+                                        Obs :
+                                    </th>
+                                    <th class="text-center">
+                                        Commentaire :
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
     </div>
   </div>
 </div>
+
+
+
+
 
 
 
