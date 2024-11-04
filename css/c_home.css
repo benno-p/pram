@@ -130,6 +130,10 @@ table.dataTable td{
 .modal-xl {
     min-width: 50%;
 }
+.modal-dialog {
+  margin-right: 0 !important;
+  margin-top: 0 !important;
+}
 
 /* TOOLTIP STADE MARE */
 .tooltip_ {
